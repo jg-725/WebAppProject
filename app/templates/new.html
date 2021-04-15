@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/cities/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="Name">Actor Name</label>
+            <input id="Name" type="text" class="form-control" placeholder="Actor's Name" name="Name">
+        </div>
+        <div class="col">
+            <label for="Year">Year Won</label>
+            <input id="Year" type="text" class="form-control" placeholder="Year Won"
+                   name="Year">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="Age">Age</label>
+            <input id="Age" type="text" class="form-control" placeholder="Age" name="Age">
+        </div>
+        <div class="col">
+            <label for="Movie">Movie</label>
+            <input id="Movie" type="text" class="form-control" placeholder="Movie" name="Movie">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="Extra">Extra Info</label>
+            <input id="Extra" type="text" class="form-control" placeholder="Extra Info"
+                   name="Extra">
+        </div>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success">Success</button>
+
+</form>
+
+{% endblock %}

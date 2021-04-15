@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">{{ name.Name }} - {{ name.Year }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ name.Movie }}</li>
+        <li class="list-group-item">{{ name.Age }}</li>
+        <li class="list-group-item">{{ name.Extra }}</li>
+    </ul>
+    <br>
+    <br>
+    <div class="card-body">
+        <a href="/edit/{{name.index}}" class="card-link btn btn-primary">edit</a>
+    </div>
+</div>
+<br>
+<form action="/delete/{{name.index}}" method="post"><button type="submit" class="btn btn-danger">Save</button></form>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{name.index}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="Name">Actor Name</label>
+            <input id="Name" type="text" class="form-control" placeholder="City Name" name="Name" value="{name.Name}}">
+        </div>
+        <div class="col">
+            <label for="Year">Year Won</label>
+            <input id="Year" type="text" class="form-control" placeholder="Year Won"
+                   name="Year" value="{{name.Year}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="Age">Age</label>
+            <input id="Age" type="text" class="form-control" placeholder="Actor Age" name="Age" value="{{name.Age}}">
+        </div>
+        <div class="col">
+            <label for="Movie">Movie</label>
+            <input id="Movie" type="text" class="form-control" placeholder="Movie" name="Movie" value="{{name.Movie}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="Extra">Extra Data</label>
+            <input id="Extra" type="text" class="form-control" placeholder="Extra Info"
+                   name="Extra" value="{{name.Extra}}">
+        </div>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
